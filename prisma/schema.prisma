@@ -17,3 +17,14 @@ model Course {
 
   @@map("courses")
 }
+
+model Module {
+  id                String   @id @default(uuid())
+  name              String   @unique
+  description       String?
+  duration_in_hours Int
+  created_at        DateTime @default(now())
+  updated_at        DateTime @updatedAt
+
+  @@map("modules")
+}

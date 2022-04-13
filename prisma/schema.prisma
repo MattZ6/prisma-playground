@@ -12,6 +12,8 @@ model Course {
   name              String   @unique
   description       String?
   duration_in_hours Int
+  teacher_id        String   @unique
+  teacher           Teacher  @relation(fields: [teacher_id], references: [id])
   created_at        DateTime @default(now())
   updated_at        DateTime @updatedAt
 
@@ -27,4 +29,14 @@ model Module {
   updated_at        DateTime @updatedAt
 
   @@map("modules")
+}
+
+model Teacher {
+  id         String   @id @default(uuid())
+  name       String
+  course     Course?
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  @@map("teachers")
 }

@@ -17,8 +17,7 @@
   "scripts": {
     "docker:up": "docker compose up -d",
     "docker:down": "docker compose down",
-    "prisma": "cross-env DATABASE_HOST=localhost prisma",
-    "db:migration:create": "yarn prisma migrate dev",
+    "db:migration:create": "prisma migrate dev",
     "postinstall": "yarn prisma generate",
     "dev": "tsnd src/main.ts"
   },

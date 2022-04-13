@@ -1,5 +1,6 @@
 {
   "name": "prisma-playground",
+  "description": "Just a prisma orm playground",
   "version": "0.0.0",
   "private": true,
   "author": {

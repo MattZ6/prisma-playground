@@ -1,6 +1,6 @@
 {
   "name": "prisma-playground",
-  "description": "Just a prisma orm playground",
+  "description": "Just a prisma ORM playground",
   "version": "0.0.0",
   "private": true,
   "license": "MIT",

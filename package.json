@@ -3,11 +3,15 @@
   "description": "Just a prisma orm playground",
   "version": "0.0.0",
   "private": true,
+  "license": "MIT",
   "author": {
     "name": "Matheus Felipe Zanin",
     "email": "matt_z6@hotmail.com",
     "url": "https://github.com/MattZ6"
   },
-  "repository": "https://github.com/MattZ6/prisma-playground",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MattZ6/prisma-playground"
+  },
   "bugs": "https://github.com/MattZ6/prisma-playground/issues"
 }

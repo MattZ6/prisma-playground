@@ -14,9 +14,19 @@
     "url": "https://github.com/MattZ6/prisma-playground"
   },
   "bugs": "https://github.com/MattZ6/prisma-playground/issues",
+  "scripts": {
+    "docker:up": "docker compose up -d",
+    "docker:down": "docker compose down",
+    "prisma": "cross-env DATABASE_HOST=localhost prisma",
+    "db:migration:create": "yarn prisma migrate dev"
+  },
   "devDependencies": {
+    "cross-env": "7.0.3",
     "prisma": "3.12.0",
     "ts-node-dev": "1.1.8",
     "typescript": "4.6.3"
+  },
+  "dependencies": {
+    "@prisma/client": "3.12.0"
   }
 }

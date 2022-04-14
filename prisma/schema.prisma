@@ -17,6 +17,8 @@ model Course {
   created_at        DateTime @default(now())
   updated_at        DateTime @updatedAt
 
+  courses_modules CourseModule[]
+
   @@map("courses")
 }
 
@@ -27,6 +29,8 @@ model Module {
   duration_in_hours Int
   created_at        DateTime @default(now())
   updated_at        DateTime @updatedAt
+
+  courses_modules CourseModule[]
 
   @@map("modules")
 }
@@ -39,4 +43,16 @@ model Teacher {
   updated_at DateTime @updatedAt
 
   @@map("teachers")
+}
+
+model CourseModule {
+  course_id  String
+  course     Course   @relation(fields: [course_id], references: [id])
+  module_id  String
+  module     Module   @relation(fields: [module_id], references: [id])
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  @@unique([course_id, module_id])
+  @@map("courses_modules")
 }
